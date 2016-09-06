@@ -1,35 +1,35 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Hello-world by ShunnYID</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天道酬勤</title>
+<h1>坚持了</h1>
+<script type="text/javascript">
+    function startTime() {
+        var today =new Date();
+        var n=today.getMonth()-5;
+        var d=today.getDate();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+// add a zero in front of numbers<10
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById('txt').innerHTML= n+"月"+d+"天"+h+"小时"+m+"分"+s+'秒';
+        t=setTimeout('startTime()',1000);
+    }
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/ShunnYID/hello-world">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/ShunnYID/hello-world/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/ShunnYID/hello-world/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-</div>
+    function checkTime(i)
+    {
+        if (i<10)
+        {i="0" + i}
+        return i
+    }
+</script>
+</head>
+<body onload="startTime()">
 <div>
-  <h2>HELLO ,WORLD</h2>
+    <p id="txt"></p>
 </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+</body>
 </html>
